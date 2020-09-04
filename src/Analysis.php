@@ -11,6 +11,7 @@ use Exception;
 use OpenApi\Annotations\AbstractAnnotation;
 use OpenApi\Annotations\OpenApi;
 use OpenApi\Annotations\Schema;
+use OpenApi\Processors\AugmentMediaTypes;
 use OpenApi\Processors\AugmentOperations;
 use OpenApi\Processors\AugmentParameters;
 use OpenApi\Processors\AugmentProperties;
@@ -487,6 +488,7 @@ class Analysis
                 new InheritProperties(),
                 new AugmentOperations(),
                 new AugmentParameters(),
+                new AugmentMediaTypes(),				
                 new MergeJsonContent(),
                 new MergeXmlContent(),
                 new OperationId(),
