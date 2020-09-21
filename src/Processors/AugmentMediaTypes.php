@@ -120,7 +120,7 @@ class AugmentMediaTypes
 					if ($isWrapped) {
 						$newValue = array();
 						foreach($value as $index => $subArray) {
-							if (is_array($subArray) && (key($subArray) == $singular) && (count($subArray) == 1)) {
+							if (is_array($subArray) && (key($subArray) == $singular) && isset($subArray[$singular]) && (count($subArray) == 1)) {
 								$newValue[] = $subArray[$singular];
 							} else {
 								$newValue[$index] = $subArray;
